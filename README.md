@@ -1,8 +1,11 @@
 # UserOnlineCounterMVCSignalR
 Display user online with SignalR
 
+
 #1: Install SignalR to your project
+
 Run nuget command
+
 Install-Package Microsoft.AspNet.SignalR -Version 2.2.2
 
 #2: Create folder Hubs and a class CounterHub.cs inside
