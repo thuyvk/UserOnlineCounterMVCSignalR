@@ -40,7 +40,7 @@ namespace thuyvk.com.Hubs
     }
 }
 ```
-## 3: Register SignalR javascript in _Layout.cshtml page
+## 3: _Layout.cshtml page
 ```
 <script src="@Url.Content("~/Scripts/jquery.signalR-2.2.2.js")"></script>
     <script src="@Url.Content("~/signalr/hubs")"></script>
@@ -59,7 +59,7 @@ namespace thuyvk.com.Hubs
 </script>
 ```
 
-## 4: Add element with id #UserOnline in Index.cshtml page to show number user online
+## 4: Index.cshtml page
 ```
 <h1 class="text-warning"><span id="UserOnline">0</span> Online</h1>
 ```
