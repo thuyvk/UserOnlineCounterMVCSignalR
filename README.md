@@ -9,8 +9,8 @@ Run nuget command
 Install-Package Microsoft.AspNet.SignalR -Version 2.2.2
 
 #2: Create folder Hubs and a class CounterHub.cs inside
-using Microsoft.AspNet.SignalR;
 
+using Microsoft.AspNet.SignalR;
 namespace thuyvk.com.Hubs
 {
     public class CounterHub : Hub
@@ -37,8 +37,6 @@ namespace thuyvk.com.Hubs
             Clients.All.UpdateCount(counter);
             return base.OnDisconnected(stopCalled);
         }
-
-
     }
 }
 
