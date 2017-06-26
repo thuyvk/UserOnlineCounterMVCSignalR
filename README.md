@@ -1,15 +1,15 @@
-# UserOnlineCounterMVCSignalR
+# User Online CounterMVCSignalR
 Display user online with SignalR
 
 
-#1: Install SignalR to your project
+##1: Install SignalR to your project
 
 Run nuget command
 
 Install-Package Microsoft.AspNet.SignalR -Version 2.2.2
 
-#2: Create folder Hubs and a class CounterHub.cs inside
-
+##2: Create folder Hubs and a class CounterHub.cs inside
+```
 using Microsoft.AspNet.SignalR;
 namespace thuyvk.com.Hubs
 {
@@ -39,8 +39,9 @@ namespace thuyvk.com.Hubs
         }
     }
 }
-
-#3: Register SignalR javascript in _Layout.cshtml page
+```
+##3: Register SignalR javascript in _Layout.cshtml page
+```
 <script src="@Url.Content("~/Scripts/jquery.signalR-2.2.2.js")"></script>
     <script src="@Url.Content("~/signalr/hubs")"></script>
     <script>
@@ -56,3 +57,4 @@ namespace thuyvk.com.Hubs
             }
         });
 </script>
+```
