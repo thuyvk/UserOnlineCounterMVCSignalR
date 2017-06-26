@@ -1,4 +1,4 @@
-# User Online CounterMVCSignalR
+# User Online Counter MVC5 SignalR
 Display user online with SignalR
 
 
@@ -57,4 +57,27 @@ namespace thuyvk.com.Hubs
             }
         });
 </script>
+```
+
+## 4: Add element with id #UserOnline in Index.cshtml page to show number user online
+```
+<h1 class="text-warning"><span id="UserOnline">0</span> Online</h1>
+```
+
+## 5: Startup.cs
+```
+using Microsoft.Owin;
+using Owin;
+
+[assembly: OwinStartupAttribute(typeof(UserOnlineCounter.Startup))]
+namespace UserOnlineCounter
+{
+    public class Startup
+    {
+        public void Configuration(IAppBuilder app)
+        {
+            app.MapSignalR();
+        }
+    }
+}
 ```
