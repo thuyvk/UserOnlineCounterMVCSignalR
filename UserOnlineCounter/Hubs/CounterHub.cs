@@ -22,7 +22,8 @@ namespace thuyvk.com.Hubs
 
         public override System.Threading.Tasks.Task OnDisconnected(bool stopCalled)
         {
-            counter = counter - 1;
+            if (counter > 0)
+                counter = counter - 1;
             Clients.All.UpdateCount(counter);
             return base.OnDisconnected(stopCalled);
         }
